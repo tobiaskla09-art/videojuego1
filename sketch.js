@@ -3,7 +3,7 @@ let floor;
 let jumpSwitch = false;
 let backgroundImg;
 let plataformas;
-let gravity = 200   ;
+let gravity =70   ;
 let key;
 let uWin;
 let winSwitch = false;
@@ -33,9 +33,9 @@ function setup() {
     playerSprite.addAni('jumping', 'assets/jumping.png');
     playerSprite.width = 60;
     playerSprite.debug = false;
-    playerSprite.scale = 2;
+    playerSprite.scale = 4;
     playerSprite.x = 900;
-    //playerSprite.gravityScale = ;
+    //playerSprite.gravityScale = 2;
     playerSprite.mass = 1;
     floor = new Sprite(width/2,windowHeight+10,windowWidth,50,STATIC);
     floor.opacity = 0;
@@ -43,7 +43,7 @@ function setup() {
     key = new Sprite();
     key.addAni('key','assets/key.png');
     key.x = 80;
-    key.y = 200;
+    key.y = 100;
     key.static = true;
     key.scale = 0.6;
 
@@ -53,11 +53,11 @@ function setup() {
    
     while (plataformas.length < 3) {
         let plataforma = new plataformas.Sprite();
-        plataforma.x = plataformas.length * 200; 
+        plataforma.x = plataformas.length * 200;
         plataforma.y = plataformas.length * 120+200;
         plataforma.addAni('plataforma','assets/metalPlatform.png');
-        plataforma.scale = 0.4 ;
-        plataforma.debug = false;
+        plataforma.scale = 2 ;
+        plataforma.debug = true;
         plataforma.width = 100;
         plataforma.static = true;
     }
@@ -246,9 +246,6 @@ function update() {
        obstacles[1].x = -1000;
        obstacles[2].x = -1000;
         for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
-        
    }
 }
-
-
 

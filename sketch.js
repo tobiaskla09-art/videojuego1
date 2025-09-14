@@ -53,8 +53,8 @@ function setup() {
    
     while (plataformas.length < 3) {
         let plataforma = new plataformas.Sprite();
-        plataforma.x = plataformas.length * 200;
-        plataforma.y = plataformas.length * 120+200;
+        plataforma.width = 150;
+        plataforma.height = 40;
         plataforma.addAni('plataforma','assets/metalPlatform.png');
         plataforma.scale = 0.4 ;
         plataforma.debug = false;
@@ -249,4 +249,5 @@ function update() {
         
    }
 }
+
 

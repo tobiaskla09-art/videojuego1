@@ -69,7 +69,7 @@ function setup() {
  spikes = new Group();
 
 
-for (let i = 0; i < plataformas.length; i++) {  
+for (let plataforma of plataformas) {
   let spike = new spikes.Sprite();
   spike.addAni('pinche','assets/spikes.png');
   spike.scale = 0.5;
@@ -245,7 +245,11 @@ function update() {
        obstacles[0].x = -1000;
        obstacles[1].x = -1000;
        obstacles[2].x = -1000;
-        for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
+       for (let spike of spikes) {
+  spike.x = -2000;
+}
+
         
    }
 }
+

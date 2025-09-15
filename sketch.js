@@ -60,7 +60,7 @@ function setup() {
         plataforma.debug = false;
         plataforma.width = 100;
         plataforma.static = true;
-    }
+    
      
 
 
@@ -263,6 +263,7 @@ function update() {
         
    }
 }
+
 
 
 

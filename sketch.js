@@ -258,8 +258,9 @@ function update() {
        obstacles[0].x = -1000;
        obstacles[1].x = -1000;
        obstacles[2].x = -1000;
-        for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
+       spikes[i].position.x = -2000;
         
    }
 }
+
 

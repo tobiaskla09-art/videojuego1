@@ -61,22 +61,32 @@ function setup() {
         plataforma.width = 100;
         plataforma.static = true;
     }
-     spikes = new Group();
+spikes = new Group();
 
+let spike0 = new spikes.Sprite();
+spike0.addAni('pinche','assets/spikes.png');
+spike0.scale = 0.5;
+spike0.x = plataformas[0].x;
+spike0.y = height - 20;
+spike0.static = true;
+spike0.debug = false;
 
+let spike1 = new spikes.Sprite();
+spike1.addAni('pinche','assets/spikes.png');
+spike1.scale = 0.5;
+spike1.x = plataformas[1].x;
+spike1.y = height - 20;
+spike1.static = true;
+spike1.debug = false;
 
+let spike2 = new spikes.Sprite();
+spike2.addAni('pinche','assets/spikes.png');
+spike2.scale = 0.5;
+spike2.x = plataformas[2].x;
+spike2.y = height - 20;
+spike2.static = true;
+spike2.debug = false;
 
- spikes = new Group();
-
-
-for (let i = 0; i < plataformas.length; i++) {  
-  let spike = new spikes.Sprite();
-  spike.addAni('pinche','assets/spikes.png');
-  spike.scale = 0.5;
-  spike.x = plataformas[i].x;            
-  spike.y = height - 20;                
-  spike.static = true;
-  spike.debug = false;
 }
 
 
@@ -235,17 +245,27 @@ function update() {
     }
 
 
-//Mecánica final del juego
-    if(gameOverSwitch){
-       image(gameOver,0,0,width,height);
-       plataformas[0].x = -1000;
-       plataformas[1].x = -1000;
-       plataformas[2].x = -1000;
-       key.x = -1000;
-       obstacles[0].x = -1000;
-       obstacles[1].x = -1000;
-       obstacles[2].x = -1000;
-        for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
+
+
+if (gameOverSwitch) {
+   image(gameOver,0,0,width,height);
+   plataformas[0].x = -1000;
+   plataformas[1].x = -1000;
+   plataformas[2].x = -1000;
+
+   obstacles[0].x = -1000;
+   obstacles[1].x = -1000;
+   obstacles[2].x = -1000;
+
+   spike0.x = -2000;
+   spike1.x = -2000;
+   spike2.x = -2000;
+
+   key.x = -1000;
+
+
+        
         
    }
 }
+

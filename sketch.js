@@ -9,7 +9,9 @@ let uWin;
 let winSwitch = false;
 let obstacles;
 let obstaclesSwitch = false;
-let spikes;
+llet spike0;
+let spike1;
+let spike2;
 let heart;
 let lives = 3;
 let gameOver;
@@ -268,4 +270,5 @@ if (gameOverSwitch) {
         
    }
 }
+
 

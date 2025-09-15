@@ -60,36 +60,23 @@ function setup() {
         plataforma.debug = false;
         plataforma.width = 100;
         plataforma.static = true;
-    
-     
+    }
+     spikes = new Group();
+
 
 
 
  spikes = new Group();
- let spike1 = new spikes.Sprite();
-spike1.addAni('pinche','assets/spikes.png');
-spike1.scale = 0.5;
-spike1.x = plataformas[0].x;
-spike1.y = height - 20;
-spike1.static = true;
-spike1.debug = false;
 
-let spike2 = new spikes.Sprite();
-spike2.addAni('pinche','assets/spikes.png');
-spike2.scale = 0.5;
-spike2.x = plataformas[1].x;
-spike2.y = height - 20;
-spike2.static = true;
-spike2.debug = false;
 
-let spike3 = new spikes.Sprite();
-spike3.addAni('pinche','assets/spikes.png');
-spike3.scale = 0.5;
-spike3.x = plataformas[2].x;
-spike3.y = height - 20;
-spike3.static = true;
-spike3.debug = false;
-
+for (let i = 0; i < plataformas.length; i++) {  
+  let spike = new spikes.Sprite();
+  spike.addAni('pinche','assets/spikes.png');
+  spike.scale = 0.5;
+  spike.x = plataformas[i].x;            
+  spike.y = height - 20;                
+  spike.static = true;
+  spike.debug = false;
 }
 
 
@@ -258,15 +245,7 @@ function update() {
        obstacles[0].x = -1000;
        obstacles[1].x = -1000;
        obstacles[2].x = -1000;
-    for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
-
+        for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
         
    }
 }
-
-
-
-
-
-
-

@@ -258,13 +258,12 @@ function update() {
        obstacles[0].x = -1000;
        obstacles[1].x = -1000;
        obstacles[2].x = -1000;
-       spike1.x = -2000;
-       spike2.x = -2000;
-       spike3.x = -2000;
+    for(let i=0; i<spikes.length; i++) spikes[i].x = -2000;
 
         
    }
 }
+
 
 
 
